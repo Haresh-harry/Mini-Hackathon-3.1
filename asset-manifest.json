@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Haresh-harry/Mini-Hackathon-3.1/static/css/main.15727260.css",
+    "main.js": "/Haresh-harry/Mini-Hackathon-3.1/static/js/main.f456c9c9.js",
+    "static/js/453.28005fda.chunk.js": "/Haresh-harry/Mini-Hackathon-3.1/static/js/453.28005fda.chunk.js",
+    "index.html": "/Haresh-harry/Mini-Hackathon-3.1/index.html",
+    "main.15727260.css.map": "/Haresh-harry/Mini-Hackathon-3.1/static/css/main.15727260.css.map",
+    "main.f456c9c9.js.map": "/Haresh-harry/Mini-Hackathon-3.1/static/js/main.f456c9c9.js.map",
+    "453.28005fda.chunk.js.map": "/Haresh-harry/Mini-Hackathon-3.1/static/js/453.28005fda.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15727260.css",
+    "static/js/main.f456c9c9.js"
+  ]
+}
