@@ -1,0 +1,332 @@
+/* General page layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+#inputDiv{
+  padding: 5px;
+}
+
+h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+div {
+  width: auto;
+  padding: 18px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.inner {
+  width: auto;
+}
+
+input,
+select,
+button,
+textarea {
+  font-size: 16px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+input[type="text"],
+textarea {
+  width: 300px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+textarea {
+  width: 250px;
+  resize: none;
+}
+
+select {
+  width: 120px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+li button {
+  background-color: #f44336;
+}
+
+li button:hover {
+  background-color: #e53935;
+}
+
+/* Filter buttons */
+button {
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#filters {
+  padding: 2px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: #1976D2;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+button[style*="font-weight: bold"] {
+  background-color: #1976D2;
+}
+
+/* Pagination controls */
+div button {
+  margin: 10px 5px;
+  background-color: #2196F3;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.inner {
+  padding: 0px;
+}
+
+div button:hover {
+  background-color: #1976D2;
+}
+
+div button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Task Info */
+p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#tracker {
+  padding: 5px 0px;
+}
+
+#deleteBtn {
+  background-color: red;
+}
+
+/* ===== Responsive Design for Different Screen Sizes ===== */
+
+/* Large Screens (Desktops & Laptops) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 900px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  input,
+  select,
+  button,
+  textarea {
+    font-size: 18px;
+    padding: 12px;
+  }
+}
+
+/* Medium Screens (Tablets & Small Laptops) */
+@media (max-width: 1024px) {
+  body {
+    height: auto;
+    padding: 20px;
+  }
+
+  .container {
+    width: 80%;
+    max-width: 700px;
+  }
+
+  input,
+  select,
+  button,
+  textarea {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #filters,
+  #pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  select,
+  textarea {
+    width: 100%;
+  }
+
+  #deleteBtn {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+/* Small Screens (Mobile Phones) */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  input,
+  select,
+  button,
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Buttons - Keep them same width */
+  button {
+    min-width: 120px;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  /* Ensure uniform button sizes */
+  #filters button, 
+  #pagination button {
+    min-width: 120px;
+    width: auto;
+  }
+
+  .inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #filters,
+  #pagination {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+  }
+
+  select,
+  textarea {
+    width: 100%;
+  }
+}
+
+/* Extra Small Screens (Very Small Phones) */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  input,
+  select,
+  button,
+  textarea {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  /* Buttons same width across all screens */
+  button {
+    min-width: 120px;
+    padding: 8px 12px;
+  }
+}
