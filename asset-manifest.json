@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Haresh-harry/Mini-Hackathon-3.1/static/css/main.15727260.css",
-    "main.js": "/Haresh-harry/Mini-Hackathon-3.1/static/js/main.f456c9c9.js",
-    "static/js/453.28005fda.chunk.js": "/Haresh-harry/Mini-Hackathon-3.1/static/js/453.28005fda.chunk.js",
-    "index.html": "/Haresh-harry/Mini-Hackathon-3.1/index.html",
-    "main.15727260.css.map": "/Haresh-harry/Mini-Hackathon-3.1/static/css/main.15727260.css.map",
-    "main.f456c9c9.js.map": "/Haresh-harry/Mini-Hackathon-3.1/static/js/main.f456c9c9.js.map",
-    "453.28005fda.chunk.js.map": "/Haresh-harry/Mini-Hackathon-3.1/static/js/453.28005fda.chunk.js.map"
+    "main.css": "/Mini-Hackathon-3.1/static/css/main.2891f29a.css",
+    "main.js": "/Mini-Hackathon-3.1/static/js/main.123b136e.js",
+    "static/js/453.28005fda.chunk.js": "/Mini-Hackathon-3.1/static/js/453.28005fda.chunk.js",
+    "index.html": "/Mini-Hackathon-3.1/index.html",
+    "main.2891f29a.css.map": "/Mini-Hackathon-3.1/static/css/main.2891f29a.css.map",
+    "main.123b136e.js.map": "/Mini-Hackathon-3.1/static/js/main.123b136e.js.map",
+    "453.28005fda.chunk.js.map": "/Mini-Hackathon-3.1/static/js/453.28005fda.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.15727260.css",
-    "static/js/main.f456c9c9.js"
+    "static/css/main.2891f29a.css",
+    "static/js/main.123b136e.js"
   ]
 }
