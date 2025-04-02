@@ -5,18 +5,7 @@ import TaskList from "./TaskList";
 import "./App.css";
 
 // Initiating Task list
-const initialTasks = [
-  {"id": 1, "title": "Buy groceries", "status": "Pending", "priority": "Medium"},
-  {"id": 2, "title": "Complete React project", "status": "Completed", "priority": "High"},
-  {"id": 3, "title": "Schedule team meeting", "status": "In Progress", "priority": "Medium"},
-  {"id": 4, "title": "Submit assignment", "status": "Pending", "priority": "High"},
-  {"id": 5, "title": "Fix website bugs", "status": "In Progress", "priority": "Medium"},
-  {"id": 6, "title": "Read a book", "status": "Pending", "priority": "Low"},
-  {"id": 7, "title": "Plan weekend trip", "status": "Completed", "priority": "Low"},
-  {"id": 8, "title": "Reply to emails", "status": "Pending", "priority": "Medium"},
-  {"id": 9, "title": "Update resume", "status": "In Progress", "priority": "High"},
-  {"id": 10, "title": "Workout session", "status": "Completed", "priority": "Low"}
-];
+const initialTasks = [];
 
 function App () {
   const [tasks, setTasks] = useState(initialTasks);
