@@ -1,13 +1,24 @@
-import { useState, useEffect } from "react";
-import "./App.css";
+import React, { useState, useEffect } from "react";
 import FilterButtons from "./FilterButtons";
 import PaginationControls from "./PaginationControls";
 import TaskList from "./TaskList";
+import "./App.css";
 
-// Task list
-const initialTasks = [];
+// Initiating Task list
+const initialTasks = [
+  {"id": 1, "title": "Buy groceries", "status": "Pending", "priority": "Medium"},
+  {"id": 2, "title": "Complete React project", "status": "Completed", "priority": "High"},
+  {"id": 3, "title": "Schedule team meeting", "status": "In Progress", "priority": "Medium"},
+  {"id": 4, "title": "Submit assignment", "status": "Pending", "priority": "High"},
+  {"id": 5, "title": "Fix website bugs", "status": "In Progress", "priority": "Medium"},
+  {"id": 6, "title": "Read a book", "status": "Pending", "priority": "Low"},
+  {"id": 7, "title": "Plan weekend trip", "status": "Completed", "priority": "Low"},
+  {"id": 8, "title": "Reply to emails", "status": "Pending", "priority": "Medium"},
+  {"id": 9, "title": "Update resume", "status": "In Progress", "priority": "High"},
+  {"id": 10, "title": "Workout session", "status": "Completed", "priority": "Low"}
+];
 
-const App = () => {
+function App () {
   const [tasks, setTasks] = useState(initialTasks);
   const [currentPage, setCurrentPage] = useState(1);
   const [filterPriority, setFilterPriority] = useState("All");
@@ -17,7 +28,7 @@ const App = () => {
   const [status, setStatus] = useState("Pending");
   const [priority, setPriority] = useState("Medium");
 
-  // Reset to first page when filter changes
+  // It Resets to first page when filter changes
   useEffect(() => {
     setCurrentPage(1);
   }, [filterPriority]);
@@ -37,12 +48,12 @@ const App = () => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentTasks = filteredTasks.slice(startIndex, startIndex + itemsPerPage);
 
-  // Function to add a new task
-  const addTask = () => {
+  // Function to add a new task also to prevent empty tasks
+  function addTask () {
     if (!title.trim()) {
       alert("Enter Title first...");
       return;
-    }; // Prevent empty tasks
+    };
 
     const newTask = {
       id: tasks.length + 1,
@@ -57,7 +68,7 @@ const App = () => {
   };
 
   // Function to update a task
-  const updateTask = (id, field, value) => {
+  function updateTask (id, field, value) {
     setTasks((prevTasks) =>
       prevTasks.map((task) =>
         task.id === id ? { ...task, [field]: value } : task
@@ -66,7 +77,7 @@ const App = () => {
   };
 
   // Function to delete a task
-  const deleteTask = (id) => {
+  function deleteTask (id) {
     setTasks(tasks.filter((task) => task.id !== id));
     if (tasks.length % itemsPerPage === 1 && currentPage > 1) {
       setCurrentPage(currentPage - 1); // Adjust page if last item on the page is deleted
@@ -79,12 +90,7 @@ const App = () => {
 
       {/* Task Input Form */}
       <div className="inner" id="inputDiv">
-        <input
-          type="text"
-          placeholder="Enter task title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
+        <input type="text" placeholder="Enter task title" value={title} onChange={(e) => setTitle(e.target.value)} />
         <select value={status} onChange={(e) => setStatus(e.target.value)}>
           <option value="Pending">Pending</option>
           <option value="In Progress">In Progress</option>
@@ -103,7 +109,7 @@ const App = () => {
         <FilterButtons filterPriority={filterPriority} handlePriorityFilterChange={setFilterPriority} />
       </div>
 
-      {/* Display total tasks and completion percentage */}
+      {/* Display total tasks and completion in percentage */}
       <div className="inner" id="tracker">
         <p>Total tasks: {totalTasks} | Completed: {completedTasks} | Progress: {completionPercentage}%</p>
       </div>
